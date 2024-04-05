@@ -1,4 +1,2 @@
-Where’s the peck of pickled peppers Peter Piper picked?
-Sam Serious picked a peck of gun.
-Peter Piper picked a peck of pickled peppers.
-Where’s the peck of pickled peppers Sam Serious picked?
+line4
+line1
