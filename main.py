@@ -1,3 +1,6 @@
+import os
+
+
 def find_same_lines(set1, set2):
     same = set()
 
@@ -26,14 +29,16 @@ def compare_files(file1, file2):
     same = find_same_lines(set1, set2)
     diff = find_diff_lines(set1, set2)
 
-    with open('same.txt', 'w') as f:
+    with open(os.path.join('output', 'same.txt'), 'w') as f:
         for line in same:
-            f.write(line + '\\n')
+            f.write(line + '\n')
 
-    with open('diff.txt', 'w') as f:
+    with open(os.path.join('output', 'diff.txt'), 'w') as f:
         for line in diff:
-            f.write(line + '\\n')
+            f.write(line + '\n')
 
 
 if __name__ == '__main__':
-    pass
+    file1 = os.path.join('input', 'file1.txt')
+    file2 = os.path.join('input', 'file2.txt')
+    compare_files(file1, file2)
