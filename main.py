@@ -33,6 +33,9 @@ def compare_files(file1, file2):
     same = find_same_lines(set1, set2)
     diff = find_diff_lines(set1, set2)
 
+    if not os.path.exists('output'):
+        os.makedirs('output')
+
     with open(os.path.join('output', 'same.txt'), 'w') as f:
         for line in same:
             f.write(line + '\n')
