@@ -18,6 +18,10 @@ def find_diff_lines(set1, set2):
         if line not in set2:
             diff.add(line)
 
+    for line in set2:
+        if line not in set1:
+            diff.add(line)
+
     return diff
 
 
